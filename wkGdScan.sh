@@ -15,13 +15,13 @@ echo -e "${BLUE}正在进行对目标站点进行基础信息收集...${NC}"
 ./waybackurls/waybackurls "$URL" > 2223.txt
 
 echo -e "${BLUE}正在对目标站点进行深度爬虫...${NC}"
-cat 2223.txt | ./katana_1.1.0/katana -jc >> Enpoints.txt
+cat 2223.txt | ./katana/katana -jc >> Enpoints.txt
 
 echo -e "${BLUE}正在检查响应中被反射的参数...${NC}"
-cat Enpoints.txt | ./Gxss_4.1/Gxss -p khXSS -o XSS_Ref.txt
+cat Enpoints.txt | ./Gxss/Gxss -p khXSS -o XSS_Ref.txt
 
 echo -e "${BLUE}正在进行xss漏洞扫描并保存结果中...${NC}"
-./dalfox_2.9.3/dalfox file XSS_Ref.txt -o Vulnerable_XSS.txt
+./dalfox/dalfox file XSS_Ref.txt -o Vulnerable_XSS.txt
 
 mkdir -p result
 mv Vulnerable_XSS.txt result/scanResult.txt
