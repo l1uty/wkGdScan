@@ -1,5 +1,5 @@
 # wkGdScan
-wkGdScan ————> w(waybackurls)k(katana)G(Gxss)d(dalfox)Scan
+wkGdScan >>>>>>>> w(waybackurls)k(katana)G(Gxss)d(dalfox)Scan
 
 **Usage**
 ```
